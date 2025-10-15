@@ -1,0 +1,45 @@
+:root{
+  --bg:#0b1020;           /* nền tối xanh tím */
+  --card:#121731;         /* thẻ */
+  --muted:#9aa3b2;        /* chữ phụ */
+  --fg:#e7e9ee;           /* chữ chính */
+  --primary:#7c9cff;      /* điểm nhấn */
+  --success:#22c55e;
+  --danger:#ef4444;
+  --warn:#eab308;
+  --border:rgba(255,255,255,.08);
+  --shadow:0 6px 24px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;background:linear-gradient(180deg,#0b1020 0%,#0a0f1a 100%);color:var(--fg);font:14px/1.5 Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial;}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.container{max-width:1180px;margin:0 auto;padding:28px}
+.row{display:flex;gap:16px;align-items:stretch}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:16px}
+.card h2{margin:0 0 8px;font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.3px}
+.card .stat{font-size:28px;font-weight:800}
+.badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:4px 10px;font-weight:700;font-size:12px;border:1px solid var(--border)}
+.badge.success{background:rgba(34,197,94,.12);color:#86efac}
+.badge.fail{background:rgba(239,68,68,.12);color:#fca5a5}
+.badge.warn{background:rgba(234,179,8,.12);color:#fde68a}
+
+.toolbar{gap:12px;margin:8px 0 16px}
+.input{background:#0f142a;border:1px solid var(--border);color:var(--fg);border-radius:10px;padding:10px 12px;min-width:280px;outline:none}
+.btn{background:linear-gradient(180deg,#1a244a,#141c3b);border:1px solid var(--border);color:var(--fg);padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+
+.tableWrap{background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);overflow:auto}
+table{width:100%;border-collapse:separate;border-spacing:0}
+thead th{position:sticky;top:0;background:#0f1633;color:#c7cce0;text-align:left;font-size:12px;letter-spacing:.3px;padding:12px;border-bottom:1px solid var(--border)}
+tbody td{padding:12px;border-bottom:1px solid var(--border)}
+tbody tr:hover{background:rgba(255,255,255,.02)}
+.repoLink{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:260px;display:inline-block}
+
+.kpiRow{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:12px}
+.kpiDot{width:8px;height:8px;border-radius:50%}
